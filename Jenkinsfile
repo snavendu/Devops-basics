@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Log in to ECR
                 script {
-                    sh "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin ${ECR_HOST}"
+                    sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${ECR_HOST}"
                 }
                 // building an image
                 script {
